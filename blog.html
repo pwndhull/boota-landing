@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Boota</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..60,400;12..60,700;12..60,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="boota.css">
+<style>
+.post-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px;margin-top:48px}
+.post-card{background:var(--sf1);border:1px solid var(--bd);border-radius:20px;
+  overflow:hidden;text-decoration:none;display:block;transition:all .2s}
+.post-card:hover{border-color:rgba(245,166,36,.3);transform:translateY(-3px)}
+.post-thumb{height:180px;display:flex;align-items:center;justify-content:center;
+  font-size:64px;border-bottom:1px solid var(--bd)}
+.post-body{padding:24px}
+.post-cat{font-size:11px;font-weight:700;color:var(--s);letter-spacing:1.5px;
+  text-transform:uppercase;margin-bottom:10px}
+.post-title{font-family:var(--font-d);font-size:20px;font-weight:800;color:var(--t1);
+  margin-bottom:10px;line-height:1.25;letter-spacing:-.3px}
+.post-excerpt{font-size:14px;color:var(--t2);line-height:1.65;margin-bottom:18px}
+.post-meta{display:flex;align-items:center;gap:12px;font-size:12px;color:var(--t3)}
+.post-av{width:28px;height:28px;border-radius:50%;background:var(--sd);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-d);font-size:12px;font-weight:700;color:var(--s)}
+.featured-post{background:var(--sf1);border:1px solid rgba(245,166,36,.2);border-radius:24px;
+  display:grid;grid-template-columns:1fr 1fr;gap:0;overflow:hidden;margin-top:48px;margin-bottom:20px}
+@media(max-width:640px){.featured-post{grid-template-columns:1fr}}
+.fp-thumb{background:var(--sd);display:flex;align-items:center;justify-content:center;font-size:80px;min-height:240px}
+.fp-body{padding:40px}
+.fp-label{font-size:11px;font-weight:700;color:var(--s);letter-spacing:2px;
+  text-transform:uppercase;margin-bottom:12px}
+.fp-title{font-family:var(--font-d);font-size:clamp(22px,3vw,32px);font-weight:800;
+  color:var(--t1);margin-bottom:14px;letter-spacing:-.5px;line-height:1.2}
+.fp-excerpt{font-size:15px;color:var(--t2);line-height:1.7;margin-bottom:24px}
+.fp-meta{font-size:13px;color:var(--t3)}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark"><svg viewBox="0 0 52 52" fill="none"><path d="M26 6C17 6 10 13 10 22c0 7 4.5 12.5 11 15v9h10v-9c6.5-2.5 11-8 11-15 0-9-7-16-16-16z" fill="#0A0A0C"/><circle cx="26" cy="22" r="6" fill="#0A0A0C" opacity=".6"/></svg></div>
+    <span class="nav-logo-text">Boota</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html#how-it-works">How it works</a>
+    <a href="index.html#for-stores">For stores</a>
+    <a href="index.html#pricing">Pricing</a>
+    <a href="blog.html" class="active">Blog</a>
+  </div>
+  <a href="index.html#download" class="nav-cta">Get the app →</a>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-glow"></div>
+  <p class="page-label animate">Stories & insights</p>
+  <h1 class="animate d1">The Boota <span style="color:var(--s)">Blog.</span></h1>
+  <p class="animate d2">Product updates, store tips, and thoughts on making grocery shopping less painful for Australians.</p>
+</section>
+
+<div class="section">
+  <!-- FEATURED -->
+  <a class="featured-post" href="blog-post-1.html">
+    <div class="fp-thumb">🚗</div>
+    <div class="fp-body">
+      <div class="fp-label">⭐ Featured post</div>
+      <div class="fp-title">Why we built Boota for Australia (not the world)</div>
+      <div class="fp-excerpt">The US has Instacart. The UK has Ocado. Australia had... not much. Here's why we built a product specifically for how Australians shop, park, and live.</div>
+      <div class="fp-meta">Pawan Dhull · June 12, 2026 · 6 min read</div>
+    </div>
+  </a>
+
+  <!-- POSTS GRID -->
+  <div class="post-grid">
+    <a class="post-card" href="blog-post-2.html">
+      <div class="post-thumb" style="background:rgba(74,222,128,.05)">📦</div>
+      <div class="post-body">
+        <div class="post-cat">How it works</div>
+        <div class="post-title">What actually happens between you placing an order and opening your boot</div>
+        <div class="post-excerpt">The 8-step journey your groceries take — from database record to boot delivery — explained without the jargon.</div>
+        <div class="post-meta"><div class="post-av">J</div><span>Jamie Chen · May 28, 2026 · 5 min read</span></div>
+      </div>
+    </a>
+    <a class="post-card" href="blog-post-3.html">
+      <div class="post-thumb" style="background:rgba(245,166,36,.05)">🏪</div>
+      <div class="post-body">
+        <div class="post-cat">For store partners</div>
+        <div class="post-title">How FreshMart Surry Hills increased weekly revenue by 35% in 3 months</div>
+        <div class="post-excerpt">A case study on what happens when a busy inner-city grocer adds boot delivery. Spoiler: the results surprised even us.</div>
+        <div class="post-meta"><div class="post-av">A</div><span>Anika Roy · May 10, 2026 · 7 min read</span></div>
+      </div>
+    </a>
+    <a class="post-card" href="#">
+      <div class="post-thumb" style="background:rgba(248,113,113,.05)">🔐</div>
+      <div class="post-body">
+        <div class="post-cat">Engineering</div>
+        <div class="post-title">How we built real-time order tracking with zero polling</div>
+        <div class="post-excerpt">Deep dive into Supabase Realtime, Postgres change streams, and why we never let the client ask "are we there yet?"</div>
+        <div class="post-meta"><div class="post-av">J</div><span>Jamie Chen · Apr 22, 2026 · 10 min read</span></div>
+      </div>
+    </a>
+    <a class="post-card" href="#">
+      <div class="post-thumb" style="background:rgba(245,166,36,.05)">💳</div>
+      <div class="post-body">
+        <div class="post-cat">Product</div>
+        <div class="post-title">Afterpay for groceries: what we learned from our first 1,000 Afterpay orders</div>
+        <div class="post-excerpt">Who uses Afterpay for groceries, how much they spend, and what it means for average order value. The numbers are interesting.</div>
+        <div class="post-meta"><div class="post-av">P</div><span>Pawan Dhull · Apr 5, 2026 · 4 min read</span></div>
+      </div>
+    </a>
+    <a class="post-card" href="#">
+      <div class="post-thumb" style="background:rgba(74,222,128,.05)">🌱</div>
+      <div class="post-body">
+        <div class="post-cat">Impact</div>
+        <div class="post-title">Planned shopping reduces food waste — our data after 50,000 orders</div>
+        <div class="post-excerpt">When you know exactly what you need before you shop, you buy less. We now have the data to prove it.</div>
+        <div class="post-meta"><div class="post-av">A</div><span>Anika Roy · Mar 18, 2026 · 5 min read</span></div>
+      </div>
+    </a>
+    <a class="post-card" href="#">
+      <div class="post-thumb" style="background:rgba(161,161,170,.05)">🇦🇺</div>
+      <div class="post-body">
+        <div class="post-cat">Expansion</div>
+        <div class="post-title">Brisbane is next: what we've learned about expanding to a new city</div>
+        <div class="post-excerpt">We launched in Sydney, then Melbourne. Here's what we did differently the second time, and what we're changing for Brisbane.</div>
+        <div class="post-meta"><div class="post-av">P</div><span>Pawan Dhull · Mar 2, 2026 · 6 min read</span></div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand"><a href="index.html" class="nav-logo" style="margin-bottom:12px;display:inline-flex"><div class="nav-logo-mark"><svg viewBox="0 0 52 52" fill="none"><path d="M26 6C17 6 10 13 10 22c0 7 4.5 12.5 11 15v9h10v-9c6.5-2.5 11-8 11-15 0-9-7-16-16-16z" fill="#0A0A0C"/><circle cx="26" cy="22" r="6" fill="#0A0A0C" opacity=".6"/></svg></div><span class="nav-logo-text">Boota</span></a><p>Boot-to-boot grocery delivery for Australia.</p></div>
+      <div class="footer-col"><h5>Product</h5><a href="index.html#how-it-works">How it works</a><a href="index.html#features">Features</a><a href="index.html#download">Download</a><a href="stores.html">Supported stores</a></div>
+      <div class="footer-col"><h5>Stores</h5><a href="index.html#for-stores">Partner with us</a><a href="index.html#pricing">Pricing</a><a href="mailto:stores@boota.com.au">Contact sales</a><a href="store-dashboard.html">Store dashboard</a></div>
+      <div class="footer-col"><h5>Company</h5><a href="about.html">About</a><a href="blog.html">Blog</a><a href="privacy.html">Privacy policy</a><a href="terms.html">Terms of service</a><a href="mailto:hello@boota.com.au">hello@boota.com.au</a></div>
+    </div>
+    <div class="footer-bottom"><div class="footer-legal">© 2026 Boota Pty Ltd. ABN 00 000 000 000. All prices include GST.</div><div class="footer-au">🇦🇺 Made in Australia · Servers in Sydney</div></div>
+  </div>
+</footer>
+<script>window.addEventListener('scroll',()=>{document.querySelector('nav').style.borderBottomColor=window.scrollY>10?'rgba(42,42,46,0.9)':'var(--bd)'})</script>
+</body></html>

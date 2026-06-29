@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Store Dashboard — Boota</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..60,400;12..60,700;12..60,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="boota.css">
+<style>
+.login-card{background:var(--sf1);border:1px solid var(--bd);border-radius:24px;
+  padding:48px;max-width:440px;margin:0 auto 40px;text-align:center}
+.lc-icon{width:64px;height:64px;background:var(--sd);border-radius:18px;
+  display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:32px}
+.lc-title{font-family:var(--font-d);font-size:26px;font-weight:800;color:var(--t1);margin-bottom:8px}
+.lc-sub{font-size:15px;color:var(--t2);margin-bottom:32px;line-height:1.6}
+.lc-divider{height:1px;background:var(--bd);margin:28px 0;position:relative}
+.lc-divider::after{content:'or';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  background:var(--sf1);padding:0 12px;font-size:12px;color:var(--t3);font-weight:600}
+.app-links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.app-link{display:flex;align-items:center;gap:10px;background:var(--sf2);
+  border:1px solid var(--bd);border-radius:12px;padding:12px 18px;
+  text-decoration:none;transition:all .2s}
+.app-link:hover{background:var(--sf3);transform:translateY(-1px)}
+.app-link-icon{font-size:24px}
+.app-link-text .al-label{font-size:10px;color:var(--t3);font-weight:600;letter-spacing:.5px;text-transform:uppercase}
+.app-link-text .al-name{font-size:14px;font-weight:700;color:var(--t1)}
+.features-list{display:flex;flex-direction:column;gap:12px;text-align:left;margin-bottom:32px}
+.fl-item{display:flex;align-items:flex-start;gap:12px}
+.fl-icon{width:36px;height:36px;border-radius:10px;background:var(--sd);
+  display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;margin-top:1px}
+.fl-text h4{font-size:14px;font-weight:700;color:var(--t1);margin-bottom:2px}
+.fl-text p{font-size:13px;color:var(--t2);line-height:1.5}
+.dash-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:48px}
+@media(max-width:640px){.dash-grid{grid-template-columns:1fr}}
+.role-card{background:var(--sf1);border:1px solid var(--bd);border-radius:20px;padding:28px}
+.role-card.featured{border-color:rgba(245,166,36,.3);background:rgba(245,166,36,.03)}
+.rc-icon{font-size:36px;margin-bottom:14px}
+.rc-title{font-family:var(--font-d);font-size:20px;font-weight:800;color:var(--t1);margin-bottom:8px}
+.rc-sub{font-size:14px;color:var(--t2);margin-bottom:20px;line-height:1.6}
+.rc-features{display:flex;flex-direction:column;gap:8px;margin-bottom:24px}
+.rc-feat{font-size:13px;color:var(--t2);display:flex;align-items:center;gap:8px}
+.rc-feat::before{content:'✓';color:var(--g);font-weight:700}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark"><svg viewBox="0 0 52 52" fill="none"><path d="M26 6C17 6 10 13 10 22c0 7 4.5 12.5 11 15v9h10v-9c6.5-2.5 11-8 11-15 0-9-7-16-16-16z" fill="#0A0A0C"/><circle cx="26" cy="22" r="6" fill="#0A0A0C" opacity=".6"/></svg></div>
+    <span class="nav-logo-text">Boota</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html#for-stores">Partner with us</a>
+    <a href="index.html#pricing">Pricing</a>
+    <a href="stores.html">Stores</a>
+    <a href="index.html#download">Customer app</a>
+  </div>
+  <a href="mailto:stores@boota.com.au" class="nav-cta">Get started →</a>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-glow"></div>
+  <p class="page-label animate">Store partners</p>
+  <h1 class="animate d1">Your store,<br><span style="color:var(--s)">always in control.</span></h1>
+  <p class="animate d2">Boota gives your store a complete suite of apps — queue management on iPad, order detail on staff phones, and a full admin dashboard on desktop.</p>
+</section>
+
+<!-- LOGIN CARD -->
+<div style="padding:60px 20px 0">
+  <div class="login-card">
+    <div class="lc-icon">🏪</div>
+    <div class="lc-title">Already a partner?</div>
+    <div class="lc-sub">Access your store dashboard on the Boota Store app. Download on iPad for the best experience.</div>
+    <div class="app-links">
+      <a href="#" class="app-link">
+        <div class="app-link-icon">📱</div>
+        <div class="app-link-text"><div class="al-label">Download on</div><div class="al-name">App Store (iPad)</div></div>
+      </a>
+      <a href="#" class="app-link">
+        <div class="app-link-icon">🤖</div>
+        <div class="app-link-text"><div class="al-label">Download on</div><div class="al-name">Google Play</div></div>
+      </a>
+    </div>
+    <div class="lc-divider"></div>
+    <div style="font-size:14px;color:var(--t2);margin-bottom:14px">Admin & reporting dashboard</div>
+    <a href="mailto:stores@boota.com.au?subject=Admin dashboard access" class="btn-primary" style="width:100%;justify-content:center">Request dashboard access →</a>
+  </div>
+</div>
+
+<!-- ROLE CARDS -->
+<div class="section">
+  <p class="section-label">Three apps, one platform</p>
+  <h2 style="margin-bottom:8px">The right tool for every role.</h2>
+  <p style="font-size:16px;color:var(--t2);margin-bottom:0">Each Boota app is purpose-built. No one needs to use a feature that's not for them.</p>
+  <div class="dash-grid">
+    <div class="role-card featured">
+      <div class="rc-icon">📋</div>
+      <div class="rc-title">Store Staff App</div>
+      <div class="rc-sub">iPad tablet app for your front-of-store team. Real-time queue, packing checklist, bay assignment. On-shift in 5 minutes.</div>
+      <div class="rc-features">
+        <div class="rc-feat">Live order queue with real-time updates</div>
+        <div class="rc-feat">Item-by-item packing checklist</div>
+        <div class="rc-feat">Missing item substitution workflow</div>
+        <div class="rc-feat">Bay assignment & handover</div>
+        <div class="rc-feat">Shift summary</div>
+      </div>
+      <a href="#" class="btn-primary" style="width:100%;justify-content:center">Download for iPad →</a>
+    </div>
+    <div class="role-card">
+      <div class="rc-icon">📊</div>
+      <div class="rc-title">Admin Dashboard</div>
+      <div class="rc-sub">Web dashboard for store owners and managers. Revenue, slot analytics, products, staff, and promotions — all in one place.</div>
+      <div class="rc-features">
+        <div class="rc-feat">Real-time revenue & order charts</div>
+        <div class="rc-feat">Product catalogue management</div>
+        <div class="rc-feat">Slot capacity & scheduling</div>
+        <div class="rc-feat">Staff accounts & permissions</div>
+        <div class="rc-feat">Promotions & discount codes</div>
+        <div class="rc-feat">Customer ratings & feedback</div>
+      </div>
+      <a href="mailto:stores@boota.com.au" class="btn-secondary" style="width:100%;justify-content:center">Request access →</a>
+    </div>
+  </div>
+</div>
+
+<!-- HOW TO GET STARTED -->
+<div style="background:var(--sf1);border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);padding:80px 20px">
+  <div style="max-width:800px;margin:0 auto">
+    <p class="section-label">Getting started</p>
+    <h2 style="margin-bottom:40px">Up and running in a day.</h2>
+    <div style="display:flex;flex-direction:column;gap:24px">
+      <div style="display:flex;align-items:flex-start;gap:20px">
+        <div style="width:40px;height:40px;border-radius:12px;background:var(--s);color:#0A0A0C;display:flex;align-items:center;justify-content:center;font-family:var(--font-d);font-size:18px;font-weight:800;flex-shrink:0">1</div>
+        <div><h4 style="font-family:var(--font-d);font-size:18px;font-weight:700;color:var(--t1);margin-bottom:6px">Sign the partner agreement</h4><p style="font-size:14px;color:var(--t2);line-height:1.65">Our partnership team will send you a simple one-page agreement. Covers pricing (8% per order), liability, and branding guidelines. No exclusivity, no lock-in.</p></div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:20px">
+        <div style="width:40px;height:40px;border-radius:12px;background:var(--s);color:#0A0A0C;display:flex;align-items:center;justify-content:center;font-family:var(--font-d);font-size:18px;font-weight:800;flex-shrink:0">2</div>
+        <div><h4 style="font-family:var(--font-d);font-size:18px;font-weight:700;color:var(--t1);margin-bottom:6px">Load your products</h4><p style="font-size:14px;color:var(--t2);line-height:1.65">Import via CSV or use the admin dashboard to add products manually. We'll help you set up categories, images, and pricing. Most stores are ready within a few hours.</p></div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:20px">
+        <div style="width:40px;height:40px;border-radius:12px;background:var(--s);color:#0A0A0C;display:flex;align-items:center;justify-content:center;font-family:var(--font-d);font-size:18px;font-weight:800;flex-shrink:0">3</div>
+        <div><h4 style="font-family:var(--font-d);font-size:18px;font-weight:700;color:var(--t1);margin-bottom:6px">Set up your bays & slots</h4><p style="font-size:14px;color:var(--t2);line-height:1.65">Tell us how many collection bays you have and what hours you want to offer. We'll configure your time slots (hourly recommended) and bay labels.</p></div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:20px">
+        <div style="width:40px;height:40px;border-radius:12px;background:var(--s);color:#0A0A0C;display:flex;align-items:center;justify-content:center;font-family:var(--font-d);font-size:18px;font-weight:800;flex-shrink:0">4</div>
+        <div><h4 style="font-family:var(--font-d);font-size:18px;font-weight:700;color:var(--t1);margin-bottom:6px">Download the app and go live</h4><p style="font-size:14px;color:var(--t2);line-height:1.65">Install the Boota Store app on your iPad. Your first customer order can arrive within hours of going live on the platform.</p></div>
+      </div>
+    </div>
+    <div style="margin-top:40px;text-align:center">
+      <a href="mailto:stores@boota.com.au" class="btn-primary">Start your onboarding →</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand"><a href="index.html" class="nav-logo" style="margin-bottom:12px;display:inline-flex"><div class="nav-logo-mark"><svg viewBox="0 0 52 52" fill="none"><path d="M26 6C17 6 10 13 10 22c0 7 4.5 12.5 11 15v9h10v-9c6.5-2.5 11-8 11-15 0-9-7-16-16-16z" fill="#0A0A0C"/><circle cx="26" cy="22" r="6" fill="#0A0A0C" opacity=".6"/></svg></div><span class="nav-logo-text">Boota</span></a><p>Boot-to-boot grocery delivery for Australia.</p></div>
+      <div class="footer-col"><h5>Product</h5><a href="index.html#how-it-works">How it works</a><a href="index.html#features">Features</a><a href="index.html#download">Download</a><a href="stores.html">Supported stores</a></div>
+      <div class="footer-col"><h5>Stores</h5><a href="index.html#for-stores">Partner with us</a><a href="index.html#pricing">Pricing</a><a href="mailto:stores@boota.com.au">Contact sales</a><a href="store-dashboard.html">Store dashboard</a></div>
+      <div class="footer-col"><h5>Company</h5><a href="about.html">About</a><a href="blog.html">Blog</a><a href="privacy.html">Privacy policy</a><a href="terms.html">Terms of service</a><a href="mailto:hello@boota.com.au">hello@boota.com.au</a></div>
+    </div>
+    <div class="footer-bottom"><div class="footer-legal">© 2026 Boota Pty Ltd. ABN 00 000 000 000. All prices include GST.</div><div class="footer-au">🇦🇺 Made in Australia · Servers in Sydney</div></div>
+  </div>
+</footer>
+<script>window.addEventListener('scroll',()=>{document.querySelector('nav').style.borderBottomColor=window.scrollY>10?'rgba(42,42,46,0.9)':'var(--bd)'})</script>
+</body></html>
