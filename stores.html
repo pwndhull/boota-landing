@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Supported Stores — Boota</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..60,400;12..60,700;12..60,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="boota.css">
+<style>
+.city-tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:36px}
+.city-tab{padding:8px 20px;border-radius:999px;font-size:14px;font-weight:600;cursor:pointer;
+  border:1px solid var(--bd);background:var(--sf1);color:var(--t2);transition:all .2s}
+.city-tab.active,.city-tab:hover{background:var(--s);color:#0A0A0C;border-color:var(--s)}
+.stores-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.store-card{background:var(--sf1);border:1px solid var(--bd);border-radius:20px;
+  padding:24px;transition:all .2s;text-decoration:none;display:block}
+.store-card:hover{border-color:rgba(245,166,36,.4);transform:translateY(-2px)}
+.sc-header{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.sc-av{width:52px;height:52px;border-radius:14px;background:var(--sd);
+  display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0}
+.sc-name{font-family:var(--font-d);font-size:17px;font-weight:700;color:var(--t1)}
+.sc-suburb{font-size:13px;color:var(--t3);margin-top:2px}
+.sc-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.sc-tag{padding:3px 10px;border-radius:999px;font-size:11px;font-weight:700;
+  background:var(--sf3);color:var(--t2)}
+.sc-tag.open{background:rgba(74,222,128,.1);color:var(--g)}
+.sc-meta{display:flex;gap:14px;font-size:12px;color:var(--t3)}
+.sc-rating{color:var(--s);font-weight:700;font-size:13px}
+.stores-city-label{font-family:var(--font-d);font-size:22px;font-weight:800;color:var(--t1);
+  margin:48px 0 20px;padding-bottom:14px;border-bottom:1px solid var(--bd)}
+.coming-soon{background:var(--sf1);border:1px dashed var(--bd);border-radius:20px;
+  padding:40px;text-align:center}
+.cs-icon{font-size:40px;margin-bottom:14px}
+.cs-title{font-family:var(--font-d);font-size:20px;font-weight:700;color:var(--t1);margin-bottom:8px}
+.cs-sub{font-size:14px;color:var(--t2)}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark"><svg viewBox="0 0 52 52" fill="none"><path d="M26 6C17 6 10 13 10 22c0 7 4.5 12.5 11 15v9h10v-9c6.5-2.5 11-8 11-15 0-9-7-16-16-16z" fill="#0A0A0C"/><circle cx="26" cy="22" r="6" fill="#0A0A0C" opacity=".6"/></svg></div>
+    <span class="nav-logo-text">Boota</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html#how-it-works">How it works</a>
+    <a href="index.html#for-stores">For stores</a>
+    <a href="index.html#pricing">Pricing</a>
+    <a href="blog.html">Blog</a>
+  </div>
+  <a href="index.html#download" class="nav-cta">Get the app →</a>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-glow"></div>
+  <p class="page-label animate">40+ locations</p>
+  <h1 class="animate d1">Find a Boota store<br><span style="color:var(--s)">near you.</span></h1>
+  <p class="animate d2">All partner stores offer boot-delivery collection. Browse, pay on the app, pick a slot, and drive straight in.</p>
+</section>
+
+<div class="section">
+  <div class="city-tabs">
+    <div class="city-tab active" onclick="filterCity('all')">All stores</div>
+    <div class="city-tab" onclick="filterCity('sydney')">Sydney</div>
+    <div class="city-tab" onclick="filterCity('melbourne')">Melbourne</div>
+    <div class="city-tab" onclick="filterCity('brisbane')">Brisbane (coming soon)</div>
+  </div>
+
+  <!-- SYDNEY -->
+  <div class="stores-city-label" data-city="sydney">📍 Sydney, NSW</div>
+  <div class="stores-grid" id="sydney-grid">
+    <a class="store-card" href="#" data-city="sydney">
+      <div class="sc-header"><div class="sc-av">🥦</div><div><div class="sc-name">FreshMart Surry Hills</div><div class="sc-suburb">Surry Hills NSW 2010</div></div></div>
+      <div class="sc-tags"><span class="sc-tag open">Open now</span><span class="sc-tag">Organic</span><span class="sc-tag">Deli</span><span class="sc-tag">Bakery</span></div>
+      <div class="sc-meta"><span class="sc-rating">★ 4.9</span><span>8am – 8pm daily</span><span>~3 min boot time</span></div>
+    </a>
+    <a class="store-card" href="#" data-city="sydney">
+      <div class="sc-header"><div class="sc-av">🧀</div><div><div class="sc-name">The Good Grocer</div><div class="sc-suburb">Newtown NSW 2042</div></div></div>
+      <div class="sc-tags"><span class="sc-tag open">Open now</span><span class="sc-tag">Specialty</span><span class="sc-tag">Vegan</span></div>
+      <div class="sc-meta"><span class="sc-rating">★ 4.8</span><span>9am – 7pm daily</span><span>~4 min boot time</span></div>
+    </a>
+    <a class="store-card" href="#" data-city="sydney">
+      <div class="sc-header"><div class="sc-av">🍎</div><div><div class="sc-name">Paddington Pantry</div><div class="sc-suburb">Paddington NSW 2021</div></div></div>
+      <div class="sc-tags"><span class="sc-tag open">Open now</span><span class="sc-tag">Fresh Produce</span><span class="sc-tag">Local</span></div>
+      <div class="sc-meta"><span class="sc-rating">★ 4.9</span><span>8am – 7pm Mon–Sat</span><span>~2 min boot time</span></div>
+    </a>
+    <a class="store-card" href="#" data-city="sydney">
+      <div class="sc-header"><div class="sc-av">🥩</div><div><div class="sc-name">Harris Farm Markets</div><div class="sc-suburb">Bondi Junction NSW 2022</div></div></div>
+      <div class="sc-tags"><span class="sc-tag open">Open now</span><span class="sc-tag">Butcher</span><span class="sc-tag">Deli</span><span class="sc-tag">Seafood</span></div>
+      <div class="sc-meta"><span class="sc-rating">★ 4.7</span><span>8am – 9pm daily</span><span>~5 min boot time</span></div>
+    </a>
+    <a class="store-card" href="#" data-city="sydney">
+      <div class="sc-header"><div class="sc-av">🌿</div><div><div class="sc-name">Organic Empire</div><div class="sc-suburb">Glebe NSW 2037</div></div></div>
+      <div class="sc-tags"><span class="sc-tag">Closes 6pm</span><span class="sc-tag">Certified Organic</span></div>
+      <div class="sc-meta"><span class="sc-rating">★ 4.8</span><span>9am – 6pm daily</span><span>~3 min boot time</span></div>
+    </a>
+    <a class="store-card" href="#" data-city="sydney">
+      <div class="sc-header"><div class="sc-av">🍞</div><div><div class="sc-name">Marrickville Metro Fresh</div><div class="sc-suburb">Marrickville NSW 2204</div></div></div>
+      <div class="sc-tags"><span class="sc-tag open">Open now</span><span class="sc-tag">Bakery</span><span class="sc-tag">Deli</span></div>
+      <div class="sc-meta"><span class="sc-rating">★ 4.6</span><span>7am – 8pm daily</span><span>~3 min boot time</span></div>
+    </a>
+  </div>
+
+  <!-- MELBOURNE -->
+  <div class="stores-city-label" data-city="melbourne">📍 Melbourne, VIC</div>
+  <div class="stores-grid" id="melbourne-grid">
+    <a class="store-card" href="#" data-city="melbourne">
+      <div class="sc-header"><div class="sc-av">🛒</div><div><div class="sc-name">Fitzroy Fresh Co.</div><div class="sc-suburb">Fitzroy VIC 3065</div></div></div>
+      <div class="sc-tags"><span class="sc-tag open">Open now</span><span class="sc-tag">Organic</span><span class="sc-tag">Local</span></div>
+      <div class="sc-meta"><span class="sc-rating">★ 4.9</span><span>8am – 8pm daily</span><span>~3 min boot time</span></div>
+    </a>
+    <a class="store-card" href="#" data-city="melbourne">
+      <div class="sc-header"><div class="sc-av">🥬</div><div><div class="sc-name">Collingwood Harvest</div><div class="sc-suburb">Collingwood VIC 3066</div></div></div>
+      <div class="sc-tags"><span class="sc-tag open">Open now</span><span class="sc-tag">Vegan</span><span class="sc-tag">Zero Waste</span></div>
+      <div class="sc-meta"><span class="sc-rating">★ 4.8</span><span>9am – 7pm Mon–Sat</span><span>~4 min boot time</span></div>
+    </a>
+    <a class="store-card" href="#" data-city="melbourne">
+      <div class="sc-header"><div class="sc-av">🍋</div><div><div class="sc-name">South Yarra Grocer</div><div class="sc-suburb">South Yarra VIC 3141</div></div></div>
+      <div class="sc-tags"><span class="sc-tag open">Open now</span><span class="sc-tag">Premium</span><span class="sc-tag">Deli</span></div>
+      <div class="sc-meta"><span class="sc-rating">★ 4.7</span><span>8am – 9pm daily</span><span>~3 min boot time</span></div>
+    </a>
+    <a class="store-card" href="#" data-city="melbourne">
+      <div class="sc-header"><div class="sc-av">🫐</div><div><div class="sc-name">Richmond Real Food</div><div class="sc-suburb">Richmond VIC 3121</div></div></div>
+      <div class="sc-tags"><span class="sc-tag open">Open now</span><span class="sc-tag">Fresh Produce</span></div>
+      <div class="sc-meta"><span class="sc-rating">★ 4.8</span><span>8am – 7pm daily</span><span>~2 min boot time</span></div>
+    </a>
+  </div>
+
+  <!-- BRISBANE COMING SOON -->
+  <div class="stores-city-label" data-city="brisbane" style="display:none">📍 Brisbane, QLD</div>
+  <div id="brisbane-grid" style="display:none">
+    <div class="coming-soon">
+      <div class="cs-icon">🚀</div>
+      <div class="cs-title">Brisbane is coming in late 2026</div>
+      <div class="cs-sub" style="margin-bottom:20px">We're onboarding store partners in New Farm, West End, and Fortitude Valley now.</div>
+      <a href="mailto:stores@boota.com.au?subject=Brisbane store interest" class="btn-primary">Register your store →</a>
+    </div>
+  </div>
+
+  <div style="background:var(--sf1);border:1px solid rgba(245,166,36,.2);border-radius:20px;padding:32px;margin-top:48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px">
+    <div>
+      <div style="font-family:var(--font-d);font-size:20px;font-weight:800;margin-bottom:6px">Don't see your suburb?</div>
+      <div style="font-size:15px;color:var(--t2)">Tell us where you want Boota and we'll prioritise it.</div>
+    </div>
+    <a href="mailto:hello@boota.com.au?subject=I want Boota in my suburb" class="btn-primary">Request your suburb →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand"><a href="index.html" class="nav-logo" style="margin-bottom:12px;display:inline-flex"><div class="nav-logo-mark"><svg viewBox="0 0 52 52" fill="none"><path d="M26 6C17 6 10 13 10 22c0 7 4.5 12.5 11 15v9h10v-9c6.5-2.5 11-8 11-15 0-9-7-16-16-16z" fill="#0A0A0C"/><circle cx="26" cy="22" r="6" fill="#0A0A0C" opacity=".6"/></svg></div><span class="nav-logo-text">Boota</span></a><p>Boot-to-boot grocery delivery for Australia.</p></div>
+      <div class="footer-col"><h5>Product</h5><a href="index.html#how-it-works">How it works</a><a href="index.html#features">Features</a><a href="index.html#download">Download</a><a href="stores.html">Supported stores</a></div>
+      <div class="footer-col"><h5>Stores</h5><a href="index.html#for-stores">Partner with us</a><a href="index.html#pricing">Pricing</a><a href="mailto:stores@boota.com.au">Contact sales</a><a href="store-dashboard.html">Store dashboard</a></div>
+      <div class="footer-col"><h5>Company</h5><a href="about.html">About</a><a href="blog.html">Blog</a><a href="privacy.html">Privacy policy</a><a href="terms.html">Terms of service</a><a href="mailto:hello@boota.com.au">hello@boota.com.au</a></div>
+    </div>
+    <div class="footer-bottom"><div class="footer-legal">© 2026 Boota Pty Ltd. ABN 00 000 000 000. All prices include GST.</div><div class="footer-au">🇦🇺 Made in Australia · Servers in Sydney</div></div>
+  </div>
+</footer>
+<script>
+window.addEventListener('scroll',()=>{document.querySelector('nav').style.borderBottomColor=window.scrollY>10?'rgba(42,42,46,0.9)':'var(--bd)'})
+function filterCity(city){
+  document.querySelectorAll('.city-tab').forEach(t=>t.classList.remove('active'))
+  event.target.classList.add('active')
+  const cities=['sydney','melbourne','brisbane']
+  cities.forEach(c=>{
+    const label=document.querySelector(`.stores-city-label[data-city="${c}"]`)
+    const grid=document.getElementById(`${c}-grid`)
+    const show=city==='all'||city===c
+    if(label)label.style.display=show?'':'none'
+    if(grid)grid.style.display=show?'grid':c==='brisbane'&&city===c?'block':'none'
+  })
+}
+</script>
+</body></html>

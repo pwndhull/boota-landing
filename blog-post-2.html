@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What actually happens between placing your order and opening your boot — Boota Blog</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..60,400;12..60,700;12..60,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="boota.css">
+<style>
+.post-hero{padding:120px 20px 48px;text-align:center;max-width:780px;margin:0 auto}
+.post-cat{font-size:12px;font-weight:700;letter-spacing:2px;color:var(--s);text-transform:uppercase;margin-bottom:14px}
+.post-hero h1{font-family:var(--font-d);font-size:clamp(28px,5vw,50px);font-weight:800;letter-spacing:-1.2px;line-height:1.1;margin-bottom:20px}
+.post-hero-meta{display:flex;align-items:center;justify-content:center;gap:14px;font-size:14px;color:var(--t3);flex-wrap:wrap}
+.post-av{width:34px;height:34px;border-radius:50%;background:var(--sd);display:flex;align-items:center;justify-content:center;font-family:var(--font-d);font-size:13px;font-weight:700;color:var(--s)}
+.post-thumb-full{max-width:740px;margin:0 auto 0;height:240px;background:var(--sd);border-radius:20px;display:flex;align-items:center;justify-content:center;font-size:90px;border:1px solid var(--bd)}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark"><svg viewBox="0 0 52 52" fill="none"><path d="M26 6C17 6 10 13 10 22c0 7 4.5 12.5 11 15v9h10v-9c6.5-2.5 11-8 11-15 0-9-7-16-16-16z" fill="#0A0A0C"/><circle cx="26" cy="22" r="6" fill="#0A0A0C" opacity=".6"/></svg></div>
+    <span class="nav-logo-text">Boota</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html#how-it-works">How it works</a>
+    <a href="index.html#for-stores">For stores</a>
+    <a href="about.html">About</a>
+    <a href="blog.html" class="active">Blog</a>
+  </div>
+  <a href="index.html#download" class="nav-cta">Get the app →</a>
+</nav>
+<div class="post-hero">
+  <div class="post-cat">How it works</div>
+  <h1>What actually happens between placing your order and opening your boot</h1>
+  <div class="post-hero-meta">
+    <div class="post-av">J</div>
+    <span>Jamie Chen</span>
+    <span>·</span><span>May 28, 2026</span>
+    <span>·</span><span>5 min read</span>
+  </div>
+</div>
+<div class="post-thumb-full" style="margin:0 auto 0;width:calc(100% - 40px)">📦</div>
+<div class="prose" style="padding-top:40px">
+
+<p>Every Boota order looks simple from the outside: you tap a few buttons, drive to the store, and someone brings your bags out. But between your finger and that boot-pop, eight things happen — and most of them in under a second.</p>
+<h2>Step 1: Browse and add to cart</h2>
+<p>When you open the Boota app and browse products, you are seeing prices fetched in real time from our Sydney-hosted database. Categories, images, and stock status are all live. Your cart is stored locally on your device using Zustand — it does not touch the server until you check out.</p>
+<h2>Step 2: Choose a slot</h2>
+<p>Slots are managed by the store's admin and enforced server-side. When you pick a slot, you are seeing how many spaces are left in real time. If someone else grabs the last spot while you are looking at it, the slot becomes unavailable before you can book it.</p>
+<h2>Step 3: Payment</h2>
+<p>When you tap "Place order", your app calls a Deno Edge Function running in Supabase. This function — not your phone — creates the Stripe PaymentIntent. Your card details never touch our servers. Stripe handles everything on their PCI-compliant infrastructure. The Edge Function fetches authoritative prices from the database so you cannot manipulate the amount on your device.</p>
+<h2>Step 4: Order confirmed</h2>
+<p>The Edge Function writes your order to the database. A Postgres trigger fires and the store's iPad app receives the new order via a live Realtime channel — within milliseconds. No polling, no manual refresh. The store knows about your order before your confirmation push notification has finished appearing on your screen.</p>
+<h2>Step 5: Packing</h2>
+<p>A staff member claims your order on the tablet and starts packing. As they tick off each item, the order status updates. Your app is subscribed to a Realtime channel for your specific order ID. The moment the status changes to "Packing", your tracking screen updates — again, no refresh needed.</p>
+<h2>Step 6: Ready</h2>
+<p>When packing is complete, you get a push notification: your order is ready. You can now drive to the store. The "I'm Here" button in your app becomes active.</p>
+<h2>Step 7: You arrive</h2>
+<p>You tap "I'm Here". The store's tablet shows your bay assignment. A staff member picks up your bags and walks to Bay 2 (or wherever you have been assigned). The whole handover takes under 3 minutes.</p>
+<h2>Step 8: Done</h2>
+<p>Your order is marked as collected. You can rate the experience in the app. The store sees the rating in their admin dashboard. Your car is already on the road.</p>
+<p>That is it. Eight steps, most of them invisible, all of them designed to get you out of that car park as fast as humanly possible.</p>
+
+</div>
+<div style="max-width:780px;margin:0 auto;padding:40px 20px 60px;border-top:1px solid var(--bd);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px">
+  <a href="blog.html" class="btn-secondary">← Back to Blog</a>
+  <a href="index.html#download" class="btn-primary">Get the Boota app →</a>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand"><a href="index.html" class="nav-logo" style="margin-bottom:12px;display:inline-flex"><div class="nav-logo-mark"><svg viewBox="0 0 52 52" fill="none"><path d="M26 6C17 6 10 13 10 22c0 7 4.5 12.5 11 15v9h10v-9c6.5-2.5 11-8 11-15 0-9-7-16-16-16z" fill="#0A0A0C"/><circle cx="26" cy="22" r="6" fill="#0A0A0C" opacity=".6"/></svg></div><span class="nav-logo-text">Boota</span></a><p>Boot-to-boot grocery delivery for Australia.</p></div>
+      <div class="footer-col"><h5>Product</h5><a href="index.html#how-it-works">How it works</a><a href="index.html#features">Features</a><a href="index.html#download">Download</a><a href="stores.html">Supported stores</a></div>
+      <div class="footer-col"><h5>Stores</h5><a href="index.html#for-stores">Partner with us</a><a href="index.html#pricing">Pricing</a><a href="mailto:stores@boota.com.au">Contact sales</a><a href="store-dashboard.html">Store dashboard</a></div>
+      <div class="footer-col"><h5>Company</h5><a href="about.html">About</a><a href="blog.html">Blog</a><a href="privacy.html">Privacy policy</a><a href="terms.html">Terms of service</a><a href="mailto:hello@boota.com.au">hello@boota.com.au</a></div>
+    </div>
+    <div class="footer-bottom"><div class="footer-legal">© 2026 Boota Pty Ltd. ABN 00 000 000 000. All prices include GST.</div><div class="footer-au">🇦🇺 Made in Australia · Servers in Sydney</div></div>
+  </div>
+</footer>
+<script>window.addEventListener('scroll',()=>{document.querySelector('nav').style.borderBottomColor=window.scrollY>10?'rgba(42,42,46,0.9)':'var(--bd)'})</script>
+</body></html>
