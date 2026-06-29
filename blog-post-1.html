@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why we built Boota for Australia (not the world) — Boota Blog</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..60,400;12..60,700;12..60,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="boota.css">
+<style>
+.post-hero{padding:120px 20px 48px;text-align:center;max-width:780px;margin:0 auto}
+.post-cat{font-size:12px;font-weight:700;letter-spacing:2px;color:var(--s);text-transform:uppercase;margin-bottom:14px}
+.post-hero h1{font-family:var(--font-d);font-size:clamp(28px,5vw,50px);font-weight:800;letter-spacing:-1.2px;line-height:1.1;margin-bottom:20px}
+.post-hero-meta{display:flex;align-items:center;justify-content:center;gap:14px;font-size:14px;color:var(--t3);flex-wrap:wrap}
+.post-av{width:34px;height:34px;border-radius:50%;background:var(--sd);display:flex;align-items:center;justify-content:center;font-family:var(--font-d);font-size:13px;font-weight:700;color:var(--s)}
+.post-thumb-full{max-width:740px;margin:0 auto 0;height:240px;background:var(--sd);border-radius:20px;display:flex;align-items:center;justify-content:center;font-size:90px;border:1px solid var(--bd)}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark"><svg viewBox="0 0 52 52" fill="none"><path d="M26 6C17 6 10 13 10 22c0 7 4.5 12.5 11 15v9h10v-9c6.5-2.5 11-8 11-15 0-9-7-16-16-16z" fill="#0A0A0C"/><circle cx="26" cy="22" r="6" fill="#0A0A0C" opacity=".6"/></svg></div>
+    <span class="nav-logo-text">Boota</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html#how-it-works">How it works</a>
+    <a href="index.html#for-stores">For stores</a>
+    <a href="about.html">About</a>
+    <a href="blog.html" class="active">Blog</a>
+  </div>
+  <a href="index.html#download" class="nav-cta">Get the app →</a>
+</nav>
+<div class="post-hero">
+  <div class="post-cat">Founder's note</div>
+  <h1>Why we built Boota for Australia (not the world)</h1>
+  <div class="post-hero-meta">
+    <div class="post-av">P</div>
+    <span>Pawan Dhull</span>
+    <span>·</span><span>June 12, 2026</span>
+    <span>·</span><span>6 min read</span>
+  </div>
+</div>
+<div class="post-thumb-full" style="margin:0 auto 0;width:calc(100% - 40px)">🚗</div>
+<div class="prose" style="padding-top:40px">
+
+<p>A lot of people ask us: why not build something that works globally? Why Australia-first?</p>
+<p>The honest answer is that Australia is genuinely different from the US and UK, and building for "global" usually means building for San Francisco. The way Australians shop, park, pay, and talk is specific — and getting those specifics wrong means building something that feels like it came from somewhere else.</p>
+<h2>The car park problem is uniquely Australian</h2>
+<p>Australia has some of the most car-centric suburban retail in the world. Westfield car parks are a national institution and a national trauma. But unlike the US, Australian car parks are dense, structured, and often connected to busy inner-city supermarkets where dwell time is brutally optimised.</p>
+<p>The "click and collect" model exists overseas, but it is mostly built around drive-throughs in suburban strip malls. The Australian context — tight inner-city car parks, small-format independent grocers, a strong preference for fresh produce — needed its own answer.</p>
+<h2>We are not Instacart</h2>
+<p>Instacart delivers groceries to your door. We do not. Boota is a collection service, not a delivery service. You drive to the store; the store brings the bags to your boot. This is deliberate.</p>
+<p>Delivery requires a fleet of gig workers, surge pricing, and the environmental cost of a van parked in a clearway on Oxford Street. Collection is more efficient, more reliable, and with proper slot management, completely predictable for both the customer and the store.</p>
+<h2>Australian payments, done properly</h2>
+<p>Afterpay is Australian. It is used differently here than BNPL products in the US. Australians use it for groceries in ways that would surprise American investors. We support Afterpay natively — hot as an afterthought.</p>
+<p>GST is included in the price, always. No US-style "we will add tax at checkout" — that is not how Australians expect prices to work.</p>
+<h2>The data stays in Sydney</h2>
+<p>We chose Supabase's Sydney region (AWS ap-southeast-2) from day one. Not for compliance theatre — because it is faster for Australian users, and because your grocery data should not leave the country you are shopping in.</p>
+<h2>What global would have looked like</h2>
+<p>We know what a "global" version of Boota would look like. USD pricing, delivery-first, USzip code formatting, a support team in a timezone 16 hours off. We have seen that app. It is not what Australia needed.</p>
+<p>Building Australia-first meant getting hundreds of small decisions right: AU pthone number format (+614XXXXXXXX), suburb-state-postcode address structure, AEST/AEDT timezone handling, Australian Consumer Law in our terms, the OAIC in our privacy policy.</p>
+<p>None of these are individually dramatic. Together, they are the difference between a product that feels native and one that feels ported.</p>
+<p style="color:var(--t3);font-style:italic;margin-top:32px">— Pawan Dhull, Co-founder and CEO</p>
+
+</div>
+<div style="max-width:780px;margin:0 auto;padding:40px 20px 60px;border-top:1px solid var(--bd);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px">
+  <a href="blog.html" class="btn-secondary">← Back to Blog</a>
+  <a href="index.html#download" class="btn-primary">Get the Boota app →</a>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand"><a href="index.html" class="nav-logo" style="margin-bottom:12px;display:inline-flex"><div class="nav-logo-mark"><svg viewBox="0 0 52 52" fill="none"><path d="M26 6C17 6 10 13 10 22c0 7 4.5 12.5 11 15v9h10v-9c6.5-2.5 11-8 11-15 0-9-7-16-16-16z" fill="#0A0A0C"/><circle cx="26" cy="22" r="6" fill="#0A0A0C" opacity=".6"/></svg></div><span class="nav-logo-text">Boota</span></a><p>Boot-to-boot grocery delivery for Australia.</p></div>
+      <div class="footer-col"><h5>Product</h5><a href="index.html#how-it-works">How it works</a><a href="index.html#features">Features</a><a href="index.html#download">Download</a><a href="stores.html">Supported stores</a></div>
+      <div class="footer-col"><h5>Stores</h5><a href="index.html#for-stores">Partner with us</a><a href="index.html#pricing">Pricing</a><a href="mailto:stores@boota.com.au">Contact sales</a><a href="store-dashboard.html">Store dashboard</a></div>
+      <div class="footer-col"><h5>Company</h5><a href="about.html">About</a><a href="blog.html">Blog</a><a href="privacy.html">Privacy policy</a><a href="terms.html">Terms of service</a><a href="mailto:hello@boota.com.au">hello@boota.com.au</a></div>
+    </div>
+    <div class="footer-bottom"><div class="footer-legal">© 2026 Boota Pty Ltd. ABN 00 000 000 000. All prices include GST.</div><div class="footer-au">🇦🇺 Made in Australia · Servers in Sydney</div></div>
+  </div>
+</footer>
+<script>window.addEventListener('scroll',()=>{document.querySelector('nav').style.borderBottomColor=window.scrollY>10?'rgba(42,42,46,0.9)':'var(--bd)'})</script>
+</body></html>
