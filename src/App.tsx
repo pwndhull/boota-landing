@@ -132,8 +132,8 @@ export default function App() {
                         <div className="flex flex-wrap gap-3 pt-2">
                           <button
                             onClick={() => handlePageSelect("architecture")}
-                            className="bg-orange-500 hover:bg-orange-600 text-white font-medium px-4 py-2 rounded-lg text-xs flex items-center gap-1.5 shadow-md shadow-orange-500/10 transition-all cursor-pointer"
-                          >
+                            className="bg-orange-500 hover:bg-orange-600 text-white font-medium px-4 py-2 rounded-lg text-xs flex items-center gap-1.5 shadow-md shadow-orange-500/10 transition-al[...]
+                            >
                             Read the architecture
                             <ArrowRight className="w-3.5 h-3.5" />
                           </button>
@@ -158,8 +158,8 @@ export default function App() {
                             </div>
                           </div>
                           <span className="text-slate-500 block">// Boot up Boota Core</span>
-                          <p className="mt-1"><span className="text-indigo-400">import</span> &#123; <span className="text-orange-400">Nexus</span> &#125; <span className="text-indigo-400">from</span> <span className="text-emerald-400">"@boota/core"</span>;</p>
-                          <p className="mt-2.5"><span className="text-indigo-400">const</span> <span className="text-blue-400">nexus</span> = <span className="text-indigo-400">new</span> <span className="text-orange-400">Nexus</span>(&#123;</p>
+                          <p className="mt-1"><span className="text-indigo-400">import</span> &#123; <span className="text-orange-400">Nexus</span> &#125; <span className="text-indigo-400">from</[...]
+                          <p className="mt-2.5"><span className="text-indigo-400">const</span> <span className="text-blue-400">nexus</span> = <span className="text-indigo-400">new</span> <span cl[...]
                           <p className="pl-4">vision: <span className="text-emerald-400">"composable product platform"</span>,</p>
                           <p className="pl-4">runtime: <span className="text-emerald-400">"server-driven"</span>,</p>
                           <p className="pl-4">ai: &#123; agents: <span className="text-amber-400">true</span>, evals: <span className="text-amber-400">true</span> &#125;</p>
@@ -178,12 +178,12 @@ export default function App() {
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                       {[
-                        { title: "Platform Architecture", desc: "System topology, tenant isolation with PostgreSQL RLS.", link: "architecture", tag: "blueprint", icon: <Cpu className="w-4 h-4 text-orange-500" /> },
-                        { title: "Server Driven UI", desc: "How screens are described by server and compiled client-side.", link: "sdui", tag: "core UI", icon: <ChevronRight className="w-4 h-4 text-orange-500" /> },
-                        { title: "Component Studio", desc: "Interactive builder tool with live mock device frame.", link: "studio", tag: "builder", icon: <Sparkles className="w-4 h-4 text-amber-500" /> },
-                        { title: "API Explorer", desc: "Try out real API endpoints live on the server-side backend.", link: "api", tag: "testing", icon: <Terminal className="w-4 h-4 text-emerald-500" /> },
-                        { title: "Database Schemas", desc: "Browse columns, keys, references, and run custom queries.", link: "database", tag: "data", icon: <Database className="w-4 h-4 text-sky-500" /> },
-                        { title: "AI Workspace", desc: "Chat in real-time with our Gemini Architect assistant.", link: "ai", tag: "intelligence", icon: <Sparkles className="w-4 h-4 text-indigo-500" /> }
+                        { title: "Platform Architecture", desc: "System topology, tenant isolation with PostgreSQL RLS.", link: "architecture", tag: "blueprint", icon: <Cpu className="w-4 h-4 tex[...]
+                        { title: "Server Driven UI", desc: "How screens are described by server and compiled client-side.", link: "sdui", tag: "core UI", icon: <ChevronRight className="w-4 h-4 te[...]
+                        { title: "Component Studio", desc: "Interactive builder tool with live mock device frame.", link: "studio", tag: "builder", icon: <Sparkles className="w-4 h-4 text-amber-5[...]
+                        { title: "API Explorer", desc: "Try out real API endpoints live on the server-side backend.", link: "api", tag: "testing", icon: <Terminal className="w-4 h-4 text-emerald-[...]
+                        { title: "Database Schemas", desc: "Browse columns, keys, references, and run custom queries.", link: "database", tag: "data", icon: <Database className="w-4 h-4 text-sky-[...]
+                        { title: "AI Workspace", desc: "Chat in real-time with our Gemini Architect assistant.", link: "ai", tag: "intelligence", icon: <Sparkles className="w-4 h-4 text-indigo-50[...]
                       ].map((card, idx) => (
                         <button
                           key={idx}
@@ -282,43 +282,6 @@ export default function App() {
         return <div className="text-slate-500 text-xs">Page not found</div>;
     }
   };
-
-  // Redirect hook for root URL
-  useEffect(() => {
-    if (!isDocsRoute) {
-      // Safe, immediate redirect to the user's preferred GitHub Pages landing page
-      window.location.replace("https://pwndhull.github.io/boota-landing/");
-    }
-  }, [isDocsRoute]);
-
-  if (!isDocsRoute) {
-    return (
-      <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center text-slate-100 font-sans p-6">
-        <div className="max-w-md w-full text-center space-y-6">
-          {/* Pulsing loading ring */}
-          <div className="relative w-16 h-16 mx-auto">
-            <div className="absolute inset-0 rounded-full border-4 border-orange-500/10" />
-            <div className="absolute inset-0 rounded-full border-4 border-t-orange-500 animate-spin" />
-          </div>
-          
-          <div className="space-y-2">
-            <h1 className="font-semibold text-lg tracking-tight text-white">Connecting to Boota...</h1>
-            <p className="text-slate-400 text-xs leading-relaxed">
-              Redirecting you to the official Boota landing page.
-            </p>
-          </div>
-          
-          <a 
-            href="https://pwndhull.github.io/boota-landing/"
-            className="inline-flex items-center gap-1.5 text-[10px] font-mono text-orange-400 hover:text-orange-300 transition-colors bg-orange-500/5 hover:bg-orange-500/10 px-3 py-1.5 rounded-lg border border-orange-500/10"
-          >
-            <span>Click here if not redirected</span>
-            <ArrowRight className="w-3 h-3" />
-          </a>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="flex bg-slate-50 min-h-screen text-slate-800 font-sans">
