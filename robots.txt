@@ -1,0 +1,10 @@
+# Boota — public marketing site.
+#
+# The internal documentation is NOT hosted here. It lives on a separate origin
+# behind Cloudflare Access and is unreachable without an authenticated session,
+# so there is nothing to exclude below.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://boota.com.au/sitemap.xml

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Public pages only. The documentation site is deliberately absent: it sits
+  behind Cloudflare Access on a different origin and must never be advertised
+  to a crawler.
+-->
+<urlset xmlns="http://www.sitemap.org/schemas/sitemap/0.9">
+  <url><loc>https://boota.com.au/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://boota.com.au/about.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://boota.com.au/stores.html</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://boota.com.au/store-dashboard.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://boota.com.au/blog.html</loc><priority>0.6</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://boota.com.au/blog-post-1.html</loc><priority>0.5</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://boota.com.au/blog-post-2.html</loc><priority>0.5</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://boota.com.au/blog-post-3.html</loc><priority>0.5</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://boota.com.au/privacy.html</loc><priority>0.4</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://boota.com.au/terms.html</loc><priority>0.4</priority><changefreq>yearly</changefreq></url>
+</urlset>
