@@ -1,0 +1,6 @@
+{
+  "name": "Boota Nexus",
+  "description": "The official landing page for Boota — the Australian boot-to-boot grocery delivery platform, alongside the hidden Boota Nexus internal engineering documentation and API playgrounds located at /internalDocs.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
