@@ -7,4 +7,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://boota.com.au/sitemap.xml
+Sitemap: https://pwndhull.github.io/boota-landing/sitemap.xml
