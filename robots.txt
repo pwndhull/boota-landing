@@ -1,4 +1,4 @@
-# Boota — public marketing site.
+# Groovo — public marketing site.
 #
 # The internal documentation is NOT hosted here. It lives on a separate origin
 # behind Cloudflare Access and is unreachable without an authenticated session,
@@ -7,4 +7,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pwndhull.github.io/boota-landing/sitemap.xml
+Sitemap: https://Groovo.com.au/sitemap.xml

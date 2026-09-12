@@ -5,13 +5,13 @@
   to a crawler.
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://pwndhull.github.io/boota-landing/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://pwndhull.github.io/boota-landing/about.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://pwndhull.github.io/boota-landing/stores.html</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://pwndhull.github.io/boota-landing/store-dashboard.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://pwndhull.github.io/boota-landing/blog.html</loc><priority>0.6</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://pwndhull.github.io/boota-landing/blog-post-1.html</loc><priority>0.5</priority><changefreq>yearly</changefreq></url>
-  <url><loc>https://pwndhull.github.io/boota-landing/blog-post-2.html</loc><priority>0.5</priority><changefreq>yearly</changefreq></url>
-  <url><loc>https://pwndhull.github.io/boota-landing/privacy.html</loc><priority>0.4</priority><changefreq>yearly</changefreq></url>
-  <url><loc>https://pwndhull.github.io/boota-landing/terms.html</loc><priority>0.4</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://groovo.com.au/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://groovo.com.au/about.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://groovo.com.au/stores.html</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://groovo.com.au/store-dashboard.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://groovo.com.au/blog.html</loc><priority>0.6</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://groovo.com.au/blog-post-1.html</loc><priority>0.5</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://groovo.com.au/blog-post-2.html</loc><priority>0.5</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://groovo.com.au/privacy.html</loc><priority>0.4</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://groovo.com.au/terms.html</loc><priority>0.4</priority><changefreq>yearly</changefreq></url>
 </urlset>
